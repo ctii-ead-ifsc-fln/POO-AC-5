@@ -46,20 +46,20 @@ public class Medico extends Pessoa implements Agendavel {
         consultas.add(consulta);
     }
 
-    public void agendarConsulta(Consulta consulta) {
-        consultas.add(consulta);
-    }
-
     @Override
     public void exibirInformacoes() {
         System.out.println("Médico: " + getNome() + ", CRM: " + crm + ", Especialidade: " + especialidade);
     }
 
+    public void agendarConsulta(Consulta consulta) {
+        consultas.add(consulta);
+    }
+
     @Override
     public String toString() {
         return "Medico{" +
-                "nome='" + super.getNome() + '\'' +
-                ", cpf='" + super.getCpf() + '\'' +
+                "nome='" + getNome() + '\'' +
+                ", cpf='" + getCpf() + '\'' +
                 ", especialidade='" + especialidade + '\'' +
                 ", crm='" + crm + '\'' +
                 '}';
